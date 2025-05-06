@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -31,24 +32,6 @@
       border-radius: 10px;
       margin: 20px 0;
     }
-    .native-grid {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-    .native-grid div {
-      width: 100px;
-      height: 80px;
-      background: #444;
-      border-radius: 8px;
-      color: #999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-    }
     .btn {
       background: #ff0066;
       color: white;
@@ -72,33 +55,33 @@
   </style>
 </head>
 <body>
-  <h2>Preview: File No. XX</h2>    <!-- Image Preview Instead of Video -->  
-<!-- Banner Ad (Above Preview Image) -->
-<div class="ad-box">
-<script type="text/javascript">
-  atOptions = {
-    'key' : 'f2b71acbf0c9e33b3c7f0d26075f82f0',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f2b71acbf0c9e33b3c7f0d26075f82f0/invoke.js"></script>
-</div>
+  <h2>Preview: File No. XX</h2>
 
-  <img src="https://i.postimg.cc/YCV2QBJg/sample.jpg" alt="Preview" class="preview-image" />    
-    <div></div>
-    <div></div>
-  </div>  <!-- Timer and Button -->  <div id="timerBox">
+  <!-- Banner Ad (Above Preview Image) -->
+  <div class="ad-box">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'f2b71acbf0c9e33b3c7f0d26075f82f0',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/f2b71acbf0c9e33b3c7f0d26075f82f0/invoke.js"></script>
+  </div>
+
+  <img src="https://i.postimg.cc/YCV2QBJg/sample.jpg" alt="Preview" class="preview-image" />
+
+  <div id="timerBox">
     <div id="countdown" style="font-size: 18px; margin-bottom: 10px;">Please wait...</div>
     <button id="watchBtn" class="btn" disabled>Watch Full Video</button>
-  </div>    <script>
-    function showInterstitialAd() {
-      console.log("Interstitial Ad Triggered");
-      // Add your ad script trigger here
-    }
+  </div>
 
+  <!-- Popunder Ad Script -->
+  <script type="text/javascript" src="//pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035.js"></script>
+
+  <script>
     window.addEventListener("load", () => {
       const btn = document.getElementById("watchBtn");
       const countdown = document.getElementById("countdown");
@@ -113,11 +96,11 @@
           countdown.innerText = "Ready to watch!";
           btn.disabled = false;
           btn.onclick = () => {
-            showInterstitialAd();
             window.open("https://yourpornsite.com/video123", "_blank");
           };
         }
       }, 1000);
     });
-  </script></body>
+  </script>
+</body>
 </html>
