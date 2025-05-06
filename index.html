@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,15 +53,6 @@
       stroke-dasharray: 377;
       stroke-dashoffset: 0;
       transition: stroke-dashoffset 1s linear;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes popIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
@@ -141,8 +133,14 @@
           btn.style.cursor = "pointer";
 
           btn.onclick = () => {
+            // Popunder Ad
             window.open("https://www.highperformanceformat.com/f2b71acbf0c9e33b3c7f0d26075f82f0/popunder", "_blank");
-            window.location.href = "https://your-video-link.com";
+
+            // Copy video link
+            const videoLink = "https://your-video-link.com";
+            navigator.clipboard.writeText(videoLink)
+              .then(() => alert("🔗 Video link copied!"))
+              .catch(err => alert("Copy failed, long press to copy manually."));
           };
 
           btn.scrollIntoView({ behavior: "smooth" });
