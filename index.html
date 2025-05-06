@@ -93,20 +93,31 @@
   </div>  <!-- Timer and Button -->  <div id="timerBox">
     <div id="countdown" style="font-size: 18px; margin-bottom: 10px;">Please wait...</div>
     <button id="watchBtn" class="btn" disabled>Watch Full Video</button>
-  </div>    
-<script type='text/javascript' src='//pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035.js'></script>
-<script>
-  const btn = document.getElementById("watchBtn");
-  btn.onclick = () => {
-    try {
-      // Trigger the popunder ad
-      window.dispatchEvent(new Event("click"));
-    } catch (e) {
-      console.log("Popunder may be blocked");
+  </div>    <script>
+    function showInterstitialAd() {
+      console.log("Interstitial Ad Triggered");
+      // Add your ad script trigger here
     }
-    // Redirect to the porn site on same page
-    window.location.href = "https://yourpornsite.com/video123";
-  };
-</script>
-</body>
+
+    window.addEventListener("load", () => {
+      const btn = document.getElementById("watchBtn");
+      const countdown = document.getElementById("countdown");
+      let seconds = 10;
+
+      countdown.innerText = `Wait ${seconds} seconds...`;
+      const timer = setInterval(() => {
+        seconds--;
+        countdown.innerText = `Wait ${seconds} seconds...`;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          countdown.innerText = "Ready to watch!";
+          btn.disabled = false;
+          btn.onclick = () => {
+            showInterstitialAd();
+            window.open("https://yourpornsite.com/video123", "_blank");
+          };
+        }
+      }, 1000);
+    });
+  </script></body>
 </html>
