@@ -113,16 +113,15 @@
           countdown.innerText = "Ready to watch!";
           btn.disabled = false;
           
-btn.onclick = () => {
-  // ✅ 1. Trigger popunder ad
-  var popScript = document.createElement('script');
-  popScript.type = 'text/javascript';
-  popScript.src = '//pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035.js';
-  document.body.appendChild(popScript);
 
-  // ✅ 2. Redirect to actual video link
+btn.onclick = () => {
+  // ✅ 1. Open popunder in new tab
+  window.open("https://pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035", "_blank");
+
+  // ✅ 2. Redirect user to full video page
   window.location.href = "https://yourpornsite.com/video123";
 };
+;
 ;
         }
       }, 1000);
