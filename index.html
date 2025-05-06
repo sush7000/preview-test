@@ -112,10 +112,18 @@
           clearInterval(timer);
           countdown.innerText = "Ready to watch!";
           btn.disabled = false;
-          btn.onclick = () => {
-            showInterstitialAd();
-            window.open("https://yourpornsite.com/video123", "_blank");
-          };
+          
+btn.onclick = () => {
+  // ✅ 1. Trigger popunder ad
+  var popScript = document.createElement('script');
+  popScript.type = 'text/javascript';
+  popScript.src = '//pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035.js';
+  document.body.appendChild(popScript);
+
+  // ✅ 2. Redirect to actual video link
+  window.location.href = "https://yourpornsite.com/video123";
+};
+;
         }
       }, 1000);
     });
