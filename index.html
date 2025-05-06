@@ -115,11 +115,13 @@
     <script type="text/javascript" src="//www.highperformanceformat.com/87e61958e9cc8274df3e93ac037c7009/invoke.js"></script>
   </div>
 
-
   <!-- Background Audio -->
   <audio id="bgMusic" autoplay loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
   </audio>
+
+  <!-- Social Bar Ad -->
+  <script type='text/javascript' src='//bagfulchiefmeant.com/ec/c7/21/ecc721f6f4ed2b420c643c4731a1a320.js'></script>
 
   <script>
     window.addEventListener('load', function () {
@@ -143,8 +145,10 @@
           btn.style.cursor = "pointer";
 
           btn.onclick = () => {
-            window.open("https://www.highperformanceformat.com/f2b71acbf0c9e33b3c7f0d26075f82f0/popunder", "_blank");
-            window.location.href = "https://your-video-link.com";
+            const url = "https://your-video-link.com";
+            navigator.clipboard.writeText(url).then(() => {
+              btn.textContent = "Link Copied!";
+            });
           };
 
           btn.scrollIntoView({ behavior: "smooth" });
@@ -153,13 +157,5 @@
     });
   </script>
 
-
-  <!-- Popunder Ad Script -->
-  <script type='text/javascript' src='//pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035.js'></script>
-
-  <!-- Social Bar Ad -->
-  <script type='text/javascript' src='//bagfulchiefmeant.com/ec/c7/21/ecc721f6f4ed2b420c643c4731a1a320.js'></script>
 </body>
-
-
 </html>
