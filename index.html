@@ -54,6 +54,15 @@
       stroke-dashoffset: 0;
       transition: stroke-dashoffset 1s linear;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -106,6 +115,7 @@
     <script type="text/javascript" src="//www.highperformanceformat.com/87e61958e9cc8274df3e93ac037c7009/invoke.js"></script>
   </div>
 
+
   <!-- Background Audio -->
   <audio id="bgMusic" autoplay loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
@@ -133,14 +143,8 @@
           btn.style.cursor = "pointer";
 
           btn.onclick = () => {
-            // Popunder Ad
             window.open("https://www.highperformanceformat.com/f2b71acbf0c9e33b3c7f0d26075f82f0/popunder", "_blank");
-
-            // Copy video link
-            const videoLink = "https://your-video-link.com";
-            navigator.clipboard.writeText(videoLink)
-              .then(() => alert("🔗 Video link copied!"))
-              .catch(err => alert("Copy failed, long press to copy manually."));
+            window.location.href = "https://your-video-link.com";
           };
 
           btn.scrollIntoView({ behavior: "smooth" });
@@ -149,8 +153,9 @@
     });
   </script>
 
+
   <!-- Popunder Ad Script -->
   <script type='text/javascript' src='//pl26579176.profitableratecpm.com/c7/fe/e7/c7fee7d119c69f79f2f4a525930cb035.js'></script>
-
 </body>
+
 </html>
